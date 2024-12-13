@@ -108,6 +108,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "State|Als Character", Transient)
 	FAlsRollingState RollingState;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "State|Als Character", Transient)
+	FGameplayTag DefaultOverlayMode;
+
 	FTimerHandle BrakingFrictionFactorResetTimer;
 
 public:
@@ -315,7 +318,8 @@ private:
 
 	FGameplayTag CalculateActualGait(const FGameplayTag& MaxAllowedGait) const;
 
-	bool CanSprint() const;
+public:
+	virtual bool CanSprint() const;
 
 	// Overlay Mode
 
@@ -399,7 +403,7 @@ private:
 
 	void RefreshLocomotionEarly();
 
-	void RefreshLocomotion();
+	
 
 	void RefreshLocomotionLate();
 
@@ -410,6 +414,9 @@ private:
 	void MulticastSetInitialVelocityYawAngle(float NewVelocityYawAngle);
 
 	// Jumping
+
+public:
+	virtual void RefreshLocomotion();
 
 public:
 	virtual void Jump() override;
@@ -471,7 +478,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "ALS|Character")
-	void StartRolling(float PlayRate = 1.0f);
+	virtual	void StartRolling(float PlayRate = 1.0f);
 
 	UFUNCTION(BlueprintNativeEvent, Category = "Als Character")
 	UAnimMontage* SelectRollMontage();

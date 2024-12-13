@@ -102,6 +102,9 @@ public:
 	float GetFieldOfViewOverride() const;
 
 	UFUNCTION(BlueprintCallable, Category = "ALS|Camera")
+	void SetCameraSettings(UAlsCameraSettings* NewCameraSettings);
+
+	UFUNCTION(BlueprintCallable, Category = "ALS|Camera")
 	void SetFieldOfViewOverride(float NewFieldOfView);
 
 	float GetPostProcessWeight() const;
@@ -115,7 +118,7 @@ public:
 	void SetRightShoulder(bool bNewRightShoulder);
 
 	UFUNCTION(BlueprintPure, Category = "ALS|Camera", Meta = (ReturnDisplayName = "Camera Location"))
-	FVector GetFirstPersonCameraLocation() const;
+	virtual FVector GetFirstPersonCameraLocation() const;
 
 	UFUNCTION(BlueprintPure, Category = "ALS|Camera", Meta = (ReturnDisplayName = "Pivot Location"))
 	FVector GetThirdPersonPivotLocation() const;

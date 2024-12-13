@@ -304,9 +304,11 @@ void UAlsAnimationInstance::RefreshLayering()
 	LayeringState.SpineSlotBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerSpineSlotCurveName());
 
 	LayeringState.PelvisBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerPelvisCurveName());
+	LayeringState.PelvisAdditiveBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerPelvisAdditiveCurveName());
 	LayeringState.PelvisSlotBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerPelvisSlotCurveName());
 
 	LayeringState.LegsBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerLegsCurveName());
+	LayeringState.LegsAdditiveBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerLegsAdditiveCurveName());
 	LayeringState.LegsSlotBlendAmount = GetCurveValue(Curves, UAlsConstants::LayerLegsSlotCurveName());
 }
 

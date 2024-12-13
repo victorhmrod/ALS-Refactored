@@ -112,10 +112,16 @@ public:
 	static const FName& LayerPelvisCurveName();
 
 	UFUNCTION(BlueprintPure, Category = "ALS|Constants|Animation Curves", Meta = (ReturnDisplayName = "Curve Name"))
+	static const FName& LayerPelvisAdditiveCurveName();
+
+	UFUNCTION(BlueprintPure, Category = "ALS|Constants|Animation Curves", Meta = (ReturnDisplayName = "Curve Name"))
 	static const FName& LayerPelvisSlotCurveName();
 
 	UFUNCTION(BlueprintPure, Category = "ALS|Constants|Animation Curves", Meta = (ReturnDisplayName = "Curve Name"))
 	static const FName& LayerLegsCurveName();
+
+	UFUNCTION(BlueprintPure, Category = "ALS|Constants|Animation Curves", Meta = (ReturnDisplayName = "Curve Name"))
+	static const FName& LayerLegsAdditiveCurveName();
 
 	UFUNCTION(BlueprintPure, Category = "ALS|Constants|Animation Curves", Meta = (ReturnDisplayName = "Curve Name"))
 	static const FName& LayerLegsSlotCurveName();
@@ -405,6 +411,12 @@ inline const FName& UAlsConstants::LayerPelvisCurveName()
 	return Name;
 }
 
+inline const FName& UAlsConstants::LayerPelvisAdditiveCurveName()
+{
+	static const FName Name{TEXTVIEW("LayerPelvisAdditive")};
+	return Name;
+}
+
 inline const FName& UAlsConstants::LayerPelvisSlotCurveName()
 {
 	static const FName Name{TEXTVIEW("LayerPelvisSlot")};
@@ -414,6 +426,12 @@ inline const FName& UAlsConstants::LayerPelvisSlotCurveName()
 inline const FName& UAlsConstants::LayerLegsCurveName()
 {
 	static const FName Name{TEXTVIEW("LayerLegs")};
+	return Name;
+}
+
+inline const FName& UAlsConstants::LayerLegsAdditiveCurveName()
+{
+	static const FName Name{TEXTVIEW("LayerLegsAdditive")};
 	return Name;
 }
 

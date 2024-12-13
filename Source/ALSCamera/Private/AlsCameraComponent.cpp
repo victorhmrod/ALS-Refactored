@@ -105,6 +105,13 @@ void UAlsCameraComponent::CompleteParallelAnimationEvaluation(const bool bDoPost
 	TickCamera(GetAnimInstance()->GetDeltaSeconds());
 }
 
+void UAlsCameraComponent::SetCameraSettings(UAlsCameraSettings* NewCameraSettings)
+{
+	ALS_ENSURE(IsValid(NewCameraSettings));
+	
+	Settings = NewCameraSettings;
+}
+
 FVector UAlsCameraComponent::GetFirstPersonCameraLocation() const
 {
 	return Character->GetMesh()->GetSocketLocation(Settings->FirstPerson.CameraSocketName);
