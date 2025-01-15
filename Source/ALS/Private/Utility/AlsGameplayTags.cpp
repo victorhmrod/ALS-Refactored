@@ -14,6 +14,7 @@ namespace AlsLocomotionModeTags
 	UE_DEFINE_GAMEPLAY_TAG(Ziplining, FName{TEXTVIEW("Als.LocomotionMode.Ziplining")})
 	UE_DEFINE_GAMEPLAY_TAG(Grabbed, FName{TEXTVIEW("Als.LocomotionMode.Grabbed")})
 	UE_DEFINE_GAMEPLAY_TAG(Swimming, FName{TEXTVIEW("Als.LocomotionMode.Swimming")})
+	UE_DEFINE_GAMEPLAY_TAG(WallRunning, FName{TEXTVIEW("Als.LocomotionMode.WallRunning")})
 }
 
 namespace AlsRotationModeTags
